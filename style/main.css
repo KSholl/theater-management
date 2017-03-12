@@ -67,9 +67,39 @@ a {
   height: 50px;
   font-size: 26px;
   text-align: center;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   background-color: #007AC4;
   color: #FFFFFF; }
+  
+.bottom-bar {
+  width: 100%;
+  height: 40px;
+  background-color: #FFFFFF;
+  color: #FFFFFF;
+  flex-direction: column;
+  justify-content: Right;
+  align-items: Right;
+  display: flex;
+}
+
+.small-button {
+  background: -webkit-linear-gradient(#2683CC, #3A9BCF);
+  background: -moz-linear-gradient(#2683CC, #3A9BCF);
+  background: -o-linear-gradient(#2683CC, #3A9BCF);
+  background: linear-gradient(#2683CC, #3A9BCF);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 26px;
+  margin: 10px 0;
+  text-align: center;
+  color: #FFFFFF;
+}
 
 .logo-banner {
   background-color: #FFFFFF; }
