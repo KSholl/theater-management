@@ -4,11 +4,22 @@
         <meta name='viewport' content='width=device-width initial-scale=1.0'>        
          <link rel='stylesheet' href='style/main.css'>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-         <script>$(document).ready(function(){
+         <script>
+$(document).ready(function(){
     $(".banner").click(function(){
         $(".menu-option").toggle(1000);
     });
-});</script>
+    $("a").click(function() {
+        var href = $(this).attr('href');
+        $("div").toggle(1000);
+        var stopclock = setInterval(function() {
+            $("div").toggle(1000);
+        }, 1000);
+        setTimeout(function() {window.location = href; clearInterval(stopclock);}, 10000);
+        return false;
+    });
+});
+        </script>
     </head>
     <body class='center'>
         <div id='screen'>
@@ -17,7 +28,9 @@
             </div>
             <div class='banner'>Home</div>
             <div class='vertically-center'>
-                <div class='menu-option'>Costumes</div>
+                <div class='menu-option'>
+                    <a href='login.html'>Costumes</a>
+                </div>
                 <div class='menu-option'>Props</div>
                 <div class='menu-option'>Add Item</div>
             </div>
