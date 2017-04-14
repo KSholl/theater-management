@@ -36,7 +36,7 @@
                     <div class='inventory-item center'>
                         <div class='item-img'></div>
                         <div class='item-des'>
-                            <span class='item-name'>Item Name</span>
+                            <span class='item-name'>King's Crown</span>
                             <span>Description XX</span>
                             <span>XXXXXXXXXXXX</span>
                             <span>XXXXXXXXXXXX</span>
@@ -45,7 +45,7 @@
                     <div class='inventory-item center'>
                         <div class='item-img'></div>
                         <div class='item-des'>
-                            <span class='item-name'>Item Name</span>
+                            <span class='item-name'>Ancient Sword</span>
                             <span>Description XX</span>
                             <span>XXXXXXXXXXXX</span>
                             <span>XXXXXXXXXXXX</span>
@@ -74,6 +74,12 @@
             $('.menu-icon').on('click', (e => {
                 $('.menu').toggleClass('show');
             }));
+            $("#search").change(function() {
+                let $keywords = $(this).val().toLowerCase();
+                $(".inventory-item").each(function() {
+                    $(this).toggle(!$keywords.length || $(".item-name", this).text().toLowerCase().includes($keywords));
+                });
+            });
         </script>
     </body>
 </html>
